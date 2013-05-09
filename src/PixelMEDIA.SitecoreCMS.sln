@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PixelMEDIA.SitecoreCMS.Controls", "pixelmedia.sitecorecms.controls\PixelMEDIA.SitecoreCMS.Controls.csproj", "{861D6E5C-036F-403D-93E9-F49E352D3415}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Controls", "Controls", "{C088CCE9-18D0-4CC0-BD8A-C14C89EDB7C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Staging|Any CPU = Staging|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{861D6E5C-036F-403D-93E9-F49E352D3415}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{861D6E5C-036F-403D-93E9-F49E352D3415}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{861D6E5C-036F-403D-93E9-F49E352D3415}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{861D6E5C-036F-403D-93E9-F49E352D3415}.Release|Any CPU.Build.0 = Release|Any CPU
+		{861D6E5C-036F-403D-93E9-F49E352D3415}.Staging|Any CPU.ActiveCfg = Release|Any CPU
+		{861D6E5C-036F-403D-93E9-F49E352D3415}.Staging|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{861D6E5C-036F-403D-93E9-F49E352D3415} = {C088CCE9-18D0-4CC0-BD8A-C14C89EDB7C7}
+	EndGlobalSection
+EndGlobal
