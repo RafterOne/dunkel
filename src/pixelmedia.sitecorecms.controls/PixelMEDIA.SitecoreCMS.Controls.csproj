@@ -74,6 +74,7 @@
     </Compile>
     <Compile Include="Controls\HtmlFiveInput.cs" />
     <Compile Include="Controls\Image.cs" />
+    <Compile Include="EventHandlers\ItemEventHandler.cs" />
     <Compile Include="Extensions\DataExtensions.cs" />
     <Compile Include="Extensions\EnumerationExtensions.cs" />
     <Compile Include="GutterRenderers\PageGutterRenderer.cs" />
