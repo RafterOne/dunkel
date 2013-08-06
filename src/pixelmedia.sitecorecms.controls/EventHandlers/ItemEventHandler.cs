@@ -17,9 +17,6 @@ namespace PixelMEDIA.SitecoreCMS.Controls.EventHandlers
     /// <event name="item:added">
     ///     <handler type="PixelMEDIA.SitecoreCMS.Controls.EventHandlers.ItemEventHandler, PixelMEDIA.SitecoreCMS.Controls" method="PopulateDisplayName"/>
     /// </event>
-    /// <event name="item:renamed">
-    ///     <handler type="PixelMEDIA.SitecoreCMS.Controls.EventHandlers.ItemEventHandler, PixelMEDIA.SitecoreCMS.Controls" method="PopulateDisplayName"/>
-    /// </event>
     /// 
     /// Taken from http://www.cognifide.com/blogs/sitecore/sitecore-best-practice-9/.
     /// </summary>
