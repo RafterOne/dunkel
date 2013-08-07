@@ -12,5 +12,6 @@ This solution builds to a .dll that can be included in Sitecore projects.  It in
 TO USE
 
 - In the solution file, update the references to Sitecore.Client and Sitecore.Kernel to use your copies of the libraries.
-- Build the solution
+- Build the solution.
 - Copy the resulting PixelMEDIA.SitecoreCMS.dll into your Sitecore solution.
+- To use the item event handlers under PixelMEDIA.SitecoreCMS.Controls.EventHandlers, you will need to add references to the desired methods to your EventHandlers.config file (or your web.config).  See the comments in each class for more details.
