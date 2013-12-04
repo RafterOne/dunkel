@@ -13,13 +13,14 @@ namespace PixelMEDIA.SitecoreCMS.Controls.Controls
         public LanguageEmbedding LanguageEmbedding = LanguageEmbedding.Never;
         public bool SiteResolving = true;
         /// <summary>
-        /// A server control that outputs a Canonical URL tag such as <link rel=href="hostname.com/foo/bar" />
+        /// A server control that outputs a Canonical URL tag such as <link rel="canonical" href="hostname.com/foo/bar" />
         /// </summary>
         /// <param name="output"></param>
         /// <param name="UseDisplayName">Defaults to false</param>
         /// <param name="AlwaysIncludeServerUrl">Defaults to true</param>
         /// <param name="LanguageEmbedding">Defaults to LanguageEmbedding.Never</param>
         /// <param name="SiteResolving">Defaults to true</param>
+        /// Usage: <pxl:CanonicalUrl runat="server" AlwaysIncludeServerUrl="True" SiteResolving="" LanguageEmbedding="Never" UseDisplayName="True" />
         protected override void DoRender(HtmlTextWriter output)
         {
             Assert.ArgumentNotNull(output, "output");
