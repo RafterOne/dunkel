@@ -2,7 +2,6 @@
 using Sitecore.Diagnostics;
 using Sitecore.Links;
 using Sitecore.Web.UI;
-using System;
 using System.Web.UI;
 
 namespace PixelMEDIA.SitecoreCMS.Controls.Controls
@@ -29,8 +28,8 @@ namespace PixelMEDIA.SitecoreCMS.Controls.Controls
 
         public bool AlwaysIncludeServerUrl
         {
-            get { return this._alwaysIncludeServerUrl; }
-            set { this._alwaysIncludeServerUrl = value; }
+            get { return _alwaysIncludeServerUrl; }
+            set { _alwaysIncludeServerUrl = value; }
         }
 
         public bool EncodeNames
@@ -65,19 +64,21 @@ namespace PixelMEDIA.SitecoreCMS.Controls.Controls
 
         public bool UseDisplayName
         {
-            get { return this._useDisplayName; }
-            set { this._useDisplayName = value; }
+            get { return _useDisplayName; }
+            set { _useDisplayName = value; }
         }
 
         /// <summary>
         ///     A server control that outputs a Canonical URL tag such as <link rel="canonical" href="hostname.com/foo/bar" />
         /// </summary>
         /// <param name="output"></param>
-        /// <code><pxl:CanonicalUrl AddAspxExtension="True" AlwaysIncludeServerUrl="True" EncodeNames="True" LowercaseUrls="True"
+        /// <code><pxl:CanonicalUrl AddAspxExtension="True" AlwaysIncludeServerUrl="True" EncodeNames="True" 
         ///     SiteResolving="" ShortenUrls="True" UseDisplayName="True" runat="server" /></code>
         protected override void DoRender(HtmlTextWriter output)
         {
             Assert.ArgumentNotNull(output, "output");
+
+            if (Sitecore.Context.Item == null) return;
 
             var options = new UrlOptions
                 {
@@ -91,10 +92,10 @@ namespace PixelMEDIA.SitecoreCMS.Controls.Controls
                     UseDisplayName = UseDisplayName
                 };
 
-            output.Write("<link rel=\"canonical\" href=\"{0}\" />",
-                         (Sitecore.Context.Item == null
-                              ? String.Empty
-                              : LinkManager.GetItemUrl(Sitecore.Context.Item, options)));
+            output.AddAttribute(HtmlTextWriterAttribute.Rel, "canonical");
+            output.AddAttribute(HtmlTextWriterAttribute.Href, LinkManager.GetItemUrl(Sitecore.Context.Item, options));
+            output.RenderBeginTag(HtmlTextWriterTag.Link);
+            output.RenderEndTag();
         }
     }
 }
