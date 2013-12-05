@@ -78,7 +78,10 @@ namespace PixelMEDIA.SitecoreCMS.Controls.Controls
         protected override void DoRender(HtmlTextWriter output)
         {
             Assert.ArgumentNotNull(output, "output");
-
+            if (Sitecore.Context.Item == null)
+            {
+                return;
+            }
             var options = new UrlOptions
                 {
                     AddAspxExtension = AddAspxExtension,
@@ -91,10 +94,10 @@ namespace PixelMEDIA.SitecoreCMS.Controls.Controls
                     UseDisplayName = UseDisplayName
                 };
 
-            output.Write("<link rel=\"canonical\" href=\"{0}\" />",
-                         (Sitecore.Context.Item == null
-                              ? String.Empty
-                              : LinkManager.GetItemUrl(Sitecore.Context.Item, options)));
+            output.AddAttribute(HtmlTextWriterAttribute.Rel, "canonical");
+            output.AddAttribute(HtmlTextWriterAttribute.Href, LinkManager.GetItemUrl(Sitecore.Context.Item, options));
+            output.RenderBeginTag(HtmlTextWriterTag.Link);
+            output.RenderEndTag();
         }
     }
 }
