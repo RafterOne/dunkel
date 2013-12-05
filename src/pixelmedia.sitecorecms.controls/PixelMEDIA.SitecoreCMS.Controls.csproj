@@ -37,21 +37,16 @@
     <Reference Include="PixelMEDIA.Controls">
       <HintPath>..\..\lib\PixelMEDIA.Controls.dll</HintPath>
     </Reference>
-    <Reference Include="PixelMEDIA.Sugar">
-      <HintPath>..\..\lib\PixelMEDIA.Sugar.dll</HintPath>
-    </Reference>
     <Reference Include="Sitecore.Kernel">
       <HintPath>..\..\lib\Sitecore.Kernel.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
