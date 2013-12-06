@@ -73,9 +73,8 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Controls\CanonicalURL.cs" />
-    <Compile Include="Controls\HtmlFiveInput.cs" />
     <Compile Include="Controls\Image.cs" />
-    <Compile Include="Controls\Panel.cs" />
+    <Compile Include="Controls\MultilineTextRenderer.cs" />
     <Compile Include="EventHandlers\ItemEventHandler.cs" />
     <Compile Include="Extensions\DataExtensions.cs" />
     <Compile Include="Extensions\EnumerationExtensions.cs" />
